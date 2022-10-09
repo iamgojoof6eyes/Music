@@ -1,3 +1,4 @@
+import asyncio
 import sys
 from config import Config
 from pyrogram import Client
@@ -39,6 +40,10 @@ class MusicClient(Client):
             session_name=str(Config.HELLBOT_SESSION),
             no_updates=True,
         )
+
+    @property
+    def loop(self: 'Client') -> asyncio.AbstractEventLoop:
+        return asyncio.get_event_loop()
 
     async def start(self):
         LOGS.info("••• Starting Hell-Music Client •••")
