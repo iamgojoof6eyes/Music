@@ -1,5 +1,5 @@
-import asyncio
 import sys
+import asyncio
 from config import Config
 from pyrogram import Client
 from HellMusic.core.logging import LOGS
@@ -42,7 +42,7 @@ class MusicClient(Client):
         )
 
     @property
-    def loop(self: 'Client') -> asyncio.AbstractEventLoop:
+    def loop(self: "Client") -> asyncio.AbstractEventLoop:
         return asyncio.get_event_loop()
 
     async def start(self):
