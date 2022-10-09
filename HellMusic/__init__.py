@@ -8,6 +8,6 @@ from HellMusic.core.bot import MusicBot, MusicClient
 bot = MusicBot()
 client = MusicClient()
 hell = HellVoice()
-helldb = HellMongoDB()
+helldb = HellMongoDB
 trg = Config.TRIGGERS
 SUDO_USERS = sudo_users()
