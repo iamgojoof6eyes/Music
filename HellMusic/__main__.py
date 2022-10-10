@@ -29,11 +29,3 @@ async def startup():
 
 
 client.loop.run_until_complete(startup())
-
-if len(sys.argv) not in (1, 3, 4):
-    client.disconnect()
-else:
-    try:
-        client.run_until_disconnected()
-    except ConnectionError:
-        pass
